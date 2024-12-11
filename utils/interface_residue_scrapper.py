@@ -16,7 +16,7 @@ def get_protein_target(structure, chains=[], name='target'):
     new_structure = Structure.Structure(name)
     new_model = Model.Model(0) # create a new model at index 0
 
-        # Extract the specified chain
+    # Extract the specified chain
     for model in structure:
         for chain in model:
             if chain.id in chains:
@@ -48,7 +48,6 @@ def scrape_residues(pdb, target_chain=["A"], residues=[], output_file=''):
     io = PDBIO()
     io.set_structure(target)
     io.save(output_file)
-
 
 if __name__ == '__main__':
     scrape_residues('test/gC1q_l78_s920008.pdb', ['A'], ["B1","B2","B7","B35","B42","B43","B46","B49","B51","B52","B53","B54","B55","B58","B59","B61","B62","B63","B65","B66","B69","B72","B73","B76"], 

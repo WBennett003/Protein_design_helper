@@ -29,17 +29,6 @@ mkdir $output_path/$1
 
 RfDiffusion_dir=/user/home/vi21227/work/vi21227/code/Models/RFdiffusion
 
-# Make sure Hotspot contains 3 hydrophobic residues, not good at hydrophilic spots.
-# RfDiffusion to generate binders which are filtered for a pAE < 10
-
-# RFDiffusion parameters
-# num_designs=50
-# iterations=25
-# partial_diff=5
-# contigs='contigmap.contigs=[C252-270,C315-330,C345-358,C379-419,C435-448 F252-270,F315-330,F345-358,F379-419,F435-448 50-100]' 
-# hotspots='ppi.hotspot_res=[C262,C263,C319,C446,F263,F324,F442]'
-# echo $input_file $contigs $hotspots
-
 # Contruct Envrioment
 module load cuda/12.4.1  
 source /user/home/vi21227/.initMamba.sh
